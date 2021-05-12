@@ -1,8 +1,10 @@
+package main;
+
 import java.util.*;
 
 public class Customer {
     private String name;
-    Vector <Rental> rentals = new Vector<>();
+    public Vector <Rental> rentals = new Vector<>();
     public Customer (String newname){
         name = newname;
     };
@@ -16,7 +18,7 @@ public class Customer {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration <Rental> enum_rentals = rentals.elements();
-        String result = "Rental Record for " + this.getName() + "\n";
+        String result = "main.Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enum_rentals.hasMoreElements()) {
